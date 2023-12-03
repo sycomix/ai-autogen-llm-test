@@ -14,13 +14,9 @@ countries = []
 areas = []
 for country_data in data:
     country_name = country_data.get('name')
-    
-    # Check if 'area' exists in the dictionary
-    if 'area' in country_data:
-        area = country_data.get('area')
-    else:
-        area = None  # Use None if the area is not available
 
+    # Check if 'area' exists in the dictionary
+    area = country_data.get('area') if 'area' in country_data else None
     # Append the data to the respective list
     countries.append(country_name)
     areas.append(area)

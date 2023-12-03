@@ -51,7 +51,11 @@ score.write("Player A: 0  Player B: 0", align="center", font=("Courier", 24, "no
 # Update the score display
 def update_score():
     score.clear()
-    score.write("Player A: {}  Player B: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
+    score.write(
+        f"Player A: {score_a}  Player B: {score_b}",
+        align="center",
+        font=("Courier", 24, "normal"),
+    )
 
 # Moving the left paddle
 def paddleaup():
